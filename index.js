@@ -12,5 +12,9 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  return tutorials.map(item => {
+    //why not have both split and join in line 18?
+    //uppercase first letter + slice the rest of the word
+    return item.split(" ").map(word => word[0].toUpperCase() + word.slice(1)).join(" ");
+  });
 }
